@@ -9,3 +9,156 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+/* GENERAL */
+body {
+    background: gray;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* WEAPON SELECTOR */
+.weapon-selector {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.weapon-box {
+    width: 120px;
+    height: 120px;
+    background: #2b2b2b;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.weapon-box:hover {
+    background: #3b3b3b;
+    transform: scale(1.05);
+}
+
+/* BOARD */
+.board {
+    width: 300px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.square {
+    width: 90px;
+    height: 90px;
+    background: #2b2b2b;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.square:hover {
+    background: #3b3b3b;
+}
+
+/* RESET BUTTON */
+.reset-btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 16px;
+    background: #0dcaf0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.name-inputs {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin-bottom: 15px;
+}
+
+.name-inputs input {
+	padding: 8px;
+	font-size: 14px;
+	width: 160px;
+}
+.setup-box {
+	width: 500px;
+	margin: 100px auto 40px auto;
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.419);
+	box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+	text-align: center;
+}
+
+.name-inputs {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	margin-bottom: 15px;
+}
+
+.weapon-selector {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.weapon-box {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	cursor: pointer;
+	border: 2px solid black;
+}
+/* Colores diferentes para X y O */
+.x-cell {
+    color: yellow; /* rojo */
+    font-weight: bold;
+}
+
+.o-cell {
+    color: #4d94ff; /* azul */
+    font-weight: bold;
+}
+/* WEAPON COLORS Y BORDER */
+.x-weapon {
+    color: yellow;       /* X amarillo */
+    border-radius: 0px;  /* sin bordes redondeados */
+    font-weight: bold;
+}
+
+.o-weapon {
+    color: blue;         /* O azul */
+    border-radius: 0px;  /* sin bordes redondeados */
+    font-weight: bold;
+}
+/* ANIMACIÓN DE WIN SIMPLIFICADA */
+.win-message {
+    font-size: 48px;        /* más grande */
+    color: green;           /* verde */
+    font-weight: bold;
+    transition: transform 0.5s ease;
+    transform: scale(1.2);  /* ligeramente más grande */
+}
+@keyframes grow {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1.2); }
+}
+
